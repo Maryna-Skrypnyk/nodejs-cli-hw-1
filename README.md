@@ -1,6 +1,6 @@
 # nodejs-cli-hw-1
 
-# Screenshots of executed commands:
+## Screenshots of executed commands:
 
 ### [Receive and display contacts-list](https://monosnap.com/file/VbrijoAox94ct6NAxvjlfuoiZ6DzhO)
 
