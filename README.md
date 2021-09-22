@@ -22,7 +22,8 @@
 
 #### 4. Add scripts in `package.json`: 
 
-```"start": "node index.js",
+```  
+"start": "node index.js",
 "dev": "nodemon index.js"   
 ```
 #### 5. Create root folder `db`
@@ -33,9 +34,9 @@
 
 #### 8. Do import modules `fs` and `path` to work with the file system
 
-#### 9. Create variable `contactsPath` and write the path to the `contacts.json` file. Use the methods of the path module `path.join` 
+#### 9. Create variable `contactsPath` and write the path to the `contacts.json` file. Use the path module's method `path.join` 
 
-#### 10. Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`. Use the `fs` module and its methods: `readFile ()` and `writeFile ()`
+#### 10. Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`. Use the `fs` module and its methods: `readFile()` and `writeFile()`
 
 #### 11. Export the created functions via `module.exports`
 
@@ -64,7 +65,7 @@ program.parse(process.argv);
 const argv = program.opts();
 ```
 
-### 14. Use the function `invokeAction ()`
+#### 14. Use the function `invokeAction()`
 
 ```
 function invokeAction({ action, id, name, email, phone }) {
@@ -108,6 +109,8 @@ node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-2
 # Remove contact
 node index.js --action remove --id=3
 ```
+
+#HW Tasks:
 
 ## Шаг 1
 
