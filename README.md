@@ -1,41 +1,45 @@
 # nodejs-cli-hw-1
 
 [Receive and display contacts-list](https://monosnap.com/file/VbrijoAox94ct6NAxvjlfuoiZ6DzhO);
+
 [Get contact by id](https://monosnap.com/file/DPWpTPTcXrO4fKcbUfYPWQ34L19cph);
+
 [Add contact](https://monosnap.com/file/cbyonRLUekADMBiquUrXinP8qSv4cC);
+
 [Remove contact](https://monosnap.com/file/t1RKnZtFqKOJcUelNknuhWCGnBF70x);
+
 [Remove contact 2](https://monosnap.com/file/wfFlnkEIhSQ1yopZsMkvEKgZmjqx44);
 
-### `npm init`.
+#### `npm init`.
 
-### Create root file `index.js`.
+#### Create root file `index.js`.
 
-### Package `nodemon` as `devDependencies` - `npm install --save-dev nodemon`.
+#### Package `nodemon` as `devDependencies` - `npm install --save-dev nodemon`.
 
 [nodemon](https://www.npmjs.com/package/nodemon)
 
-### Add scripts in `package.json`: 
+#### Add scripts in `package.json`: 
 
 ```"start": "node index.js",
 "dev": "nodemon index.js"   
 ```
-### Create root folder `db`.
+#### Create root folder `db`.
 
-### Create file `contacts.json` in the folder `db`.
+#### Create file `contacts.json` in the folder `db`.
 
-### Create root file `contacts.js`.
+#### Create root file `contacts.js`.
 
-### Do import modules `fs` and `path` to work with the file system.
+#### Do import modules `fs` and `path` to work with the file system.
 
-### Create variable `contactsPath` and write the path to the `contacts.json` file. Use the methods of the path module `path.join`. 
+#### Create variable `contactsPath` and write the path to the `contacts.json` file. Use the methods of the path module `path.join`. 
 
-### Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`. Use the `fs` module and its methods: `readFile ()` and `writeFile ()`.
+#### Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`. Use the `fs` module and its methods: `readFile ()` and `writeFile ()`.
 
-### Export the created functions via `module.exports`.
+#### Export the created functions via `module.exports`.
 
-### Import the `contacts.js` module in the `index.js` file and check the functionality.
+#### Import the `contacts.js` module in the `index.js` file and check the functionality.
 
-### Import the `yargs` package or `commander` package in `index.js`.
+#### Import the `yargs` package or `commander` package in `index.js`.
 
 ```
 const argv = require('yargs').argv;
@@ -87,7 +91,7 @@ function invokeAction({ action, id, name, email, phone }) {
 invokeAction(argv);
 ```
 
-### Run commands in terminal
+#### Run commands in terminal
 
 ```shell
 # Receive and display the contacts list (console.table)
