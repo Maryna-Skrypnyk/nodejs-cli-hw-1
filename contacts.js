@@ -25,13 +25,13 @@ function listContacts() {
 
 async function getContactById(contactId) {
   const contacts = await readContacts();
-  const [result] = contacts.filter((contact) => contact.id == contactId);
+  const [result] = contacts.filter((contact) => contact.id === contactId);
   return result;
 }
 
 async function removeContact(contactId) {
   const contacts = await readContacts();
-  const result = contacts.filter((contact) => contact.id != contactId);
+  const result = contacts.filter((contact) => contact.id !== contactId);
   await fs.writeFile(contactsPath, JSON.stringify(result, null, 2));
   return result;
 }

@@ -22,12 +22,13 @@
 
 [nodemon](https://www.npmjs.com/package/nodemon)
 
-4. Add scripts in `package.json`: 
+4. Add scripts in `package.json`:
 
-```  
-"start": "node index.js",
-"dev": "nodemon index.js"   
 ```
+"start": "node index.js",
+"dev": "nodemon index.js"
+```
+
 5. Create root folder `db`
 
 6. Create file `contacts.json` in the folder `db`
@@ -36,7 +37,7 @@
 
 8. Do import modules `fs` and `path` to work with the file system
 
-9. Create variable `contactsPath` and write the path to the `contacts.json` file. Use the path module's method `path.join` 
+9. Create variable `contactsPath` and write the path to the `contacts.json` file. Use the path module's method `path.join`
 
 10. Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`. Use the `fs` module and its methods: `readFile()` and `writeFile()`
 
@@ -48,9 +49,9 @@
 
 ```
 const argv = require('yargs').argv;
-``` 
+```
 
-or 
+or
 
 ```
 const { Command } = require('commander');
@@ -170,29 +171,29 @@ function addContact(name, email, phone) {
 
 ```js
 // index.js
-const argv = require('yargs').argv;
+const argv = require("yargs").argv;
 
 // TODO: рефакторить
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
-    case 'list':
+    case "list":
       // ...
       break;
 
-    case 'get':
+    case "get":
       // ... id
       break;
 
-    case 'add':
+    case "add":
       // ... name email phone
       break;
 
-    case 'remove':
+    case "remove":
       // ... id
       break;
 
     default:
-      console.warn('\x1B[31m Unknown action type!');
+      console.warn("\x1B[31m Unknown action type!");
   }
 }
 
@@ -202,14 +203,14 @@ invokeAction(argv);
 Так же, вы можете использовать модуль [commander](https://www.npmjs.com/package/commander) для парсинга аргументов командной строки. Это более популярная альтернатива модуля `yargs`
 
 ```js
-const { Command } = require('commander');
+const { Command } = require("commander");
 const program = new Command();
 program
-  .option('-a, --action <type>', 'choose action')
-  .option('-i, --id <type>', 'user id')
-  .option('-n, --name <type>', 'user name')
-  .option('-e, --email <type>', 'user email')
-  .option('-p, --phone <type>', 'user phone');
+  .option("-a, --action <type>", "choose action")
+  .option("-i, --id <type>", "user id")
+  .option("-n, --name <type>", "user name")
+  .option("-e, --email <type>", "user email")
+  .option("-p, --phone <type>", "user phone");
 
 program.parse(process.argv);
 
@@ -218,24 +219,24 @@ const argv = program.opts();
 // TODO: рефакторить
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
-    case 'list':
+    case "list":
       // ...
       break;
 
-    case 'get':
+    case "get":
       // ... id
       break;
 
-    case 'add':
+    case "add":
       // ... name email phone
       break;
 
-    case 'remove':
+    case "remove":
       // ... id
       break;
 
     default:
-      console.warn('\x1B[31m Unknown action type!');
+      console.warn("\x1B[31m Unknown action type!");
   }
 }
 
@@ -274,5 +275,3 @@ node index.js --action remove --id=3
 - Название функции или метода содержит глагол
 - В коде нет закомментированных участков кода
 - Проект корректно работает в актуальной LTS-версии Node
-
-
