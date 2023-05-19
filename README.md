@@ -39,7 +39,7 @@
 
 9. Create variable `contactsPath` and write the path to the `contacts.json` file. Use the path module's method `path.join`
 
-10. Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`. Use the `fs` module and its methods: `readFile()` and `writeFile()`
+10. Add functions to work with the contacts collection: `listContacts`, `getContactById`, `removeContact`, `addContact`, `updateContactById`. Use the `fs` module and its methods: `readFile()` and `writeFile()`
 
 11. Export the created functions via `module.exports`
 
@@ -89,6 +89,10 @@ function invokeAction({ action, id, name, email, phone }) {
       // ... id
       break;
 
+    case 'update':
+      // ... id name email phone
+      break;
+
     default:
       console.warn('\x1B[31m Unknown action type!');
   }
@@ -111,6 +115,9 @@ node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-2
 
 # Remove contact
 node index.js --action remove --id=3
+
+# Update contact
+node index.js --action update --name Mango1 --email mango1@gmail.com --phone 322-22-21
 ```
 
 # HW Tasks:
@@ -159,6 +166,10 @@ function removeContact(contactId) {
 function addContact(name, email, phone) {
   // ...твій код
 }
+
+function updateContactById(contactId, data) {
+  // ...твій код
+}
 ```
 
 ## Крок 3
@@ -190,6 +201,10 @@ function invokeAction({ action, id, name, email, phone }) {
 
     case "remove":
       // ... id
+      break;
+
+    case "update":
+      // ... id name email phone
       break;
 
     default:
@@ -235,6 +250,10 @@ function invokeAction({ action, id, name, email, phone }) {
       // ... id
       break;
 
+    case "update":
+      // ... id name email phone
+      break;
+
     default:
       console.warn("\x1B[31m Unknown action type!");
   }
@@ -259,6 +278,9 @@ node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-2
 
 # Видаляємо контакт
 node index.js --action remove --id=3
+
+# Оновлюємо контакт
+node index.js --action update --id 10 --name Mango1 --email mango1@gmail.com --phone 322-22-21
 ```
 
 ## Крок 6 - Здача домашнього завдання.
